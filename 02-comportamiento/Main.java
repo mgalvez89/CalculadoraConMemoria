@@ -50,6 +50,10 @@ public class Main {
         case "d":
           System.out.println("Ingresa un número:");
           entrada = sc.nextFloat();
+          if(entrada == 0){
+            System.out.println("No se puede realizar división con valor: " + entrada);
+            break;
+          }
           Comando comando4 = new ComandoDividir(resultado, entrada);
           resultado = comando4.ejecutar();
           pila.add(comando4);
